@@ -2,7 +2,8 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Images
+# IMAGES
+# EDIT THIS TO WORK
 img1 = cv.imread("./green/green4.jpg")
 img2 = cv.imread("./red/red1.jpg")
 
@@ -18,8 +19,8 @@ def maxImage(w, h, max_res):
 
 def morph(img):
     kernel = np.ones(shape=(12,12), dtype=np.uint8)
-    dilate = cv.morphologyEx(img, op=cv.MORPH_CLOSE, kernel=kernel)
-    return dilate
+    close = cv.morphologyEx(img, op=cv.MORPH_CLOSE, kernel=kernel)
+    return close
 
 
 def rangeUL(img, lower=[], upper=[]):
